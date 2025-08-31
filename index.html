@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form action="/" method="GET" class="form" id="myForm">
+            <h1 class="title">Send Your Query</h2>
+
+            <div class="name">  
+                <div class="form_div">
+                    <input type="text" id="fname" class="form_input" placeholder="" maxlength="20">
+                    <label for="" class="form_label">First Name</label>
+                    <div class="error"></div>  
+                </div>
+
+                <div class="form_div">
+                    <input type="text" id="lname" class="form_input" placeholder="" maxlength="30">
+                    <label for="" class="form_label">Last Name</label>
+                    <div class="error"></div>  
+                </div>
+            </div>
+
+            <div class="form_div">
+                <input type="text" id="email" class="form_input" placeholder="">
+                <label for="" class="form_label">Email</label>
+                <div class="error"></div>  
+            </div>
+
+            <div class="form_div">
+                <select name="issue" class="form_input" id="issueSelect">
+                    <option value="" disabled selected hidden></option>
+                    <option value="Query">Query</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Complaint">Complaint</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label for="" class="form_issuelabel" id="issueLabel">Select Issue</label>
+                <div class="error"></div>
+            </div>
+
+            <div class="form_div">
+                <textarea id="message" class="form_area" placeholder="" maxlength="150"></textarea>
+                <label for="" class="form_label">Your Message</label>
+                <div class="error"></div>  
+            </div>
+
+            <div class="form_btn">
+                <input type="submit" class="btn" value="Submit">
+                <input type="reset" class="btn" Value="Reset">
+            </div>
+        </form>
+
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <h1>Submitted Details</h1>
+                <p><strong>First Name:</strong> <span id="out-first"></span></p>
+                <p><strong>Last Name:</strong> <span id="out-last"></span></p>
+                <p><strong>Email:</strong> <span id="out-email"></span></p>
+                <p><strong>Issue:</strong> <span id="out-issue"></span></p>
+                <p><strong>Message:</strong> <span id="out-message"></span></p>
+                <div class="confirm_btn">
+                    <button onclick="closePopup()" class="btn">Edit</button>
+                    <button class="btn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
